@@ -59,7 +59,7 @@ def plot_all_methods(series_train_and_valid, series_train, HORIZON):
             ),
             method_name = 'last average',
             accuracy_measure=smape
-        ) for series_name in itertools.islice(series_train.columns, 12, 14)
+        ) for series_name in itertools.islice(series_train.columns, 27, 28)
     ]
 
     [
@@ -74,7 +74,7 @@ def plot_all_methods(series_train_and_valid, series_train, HORIZON):
             ),
             method_name = 'moving average',
             accuracy_measure=smape
-        ) for series_name in itertools.islice(series_train.columns, 12, 14)
+        ) for series_name in itertools.islice(series_train.columns, 27, 28)
     ]
 
     [
@@ -89,7 +89,7 @@ def plot_all_methods(series_train_and_valid, series_train, HORIZON):
             ),
             method_name = 'last season',
             accuracy_measure=smape
-        ) for series_name in itertools.islice(series_train.columns, 12, 13)
+        ) for series_name in itertools.islice(series_train.columns, 27, 28)
     ]
 
     [
@@ -121,7 +121,7 @@ def plot_all_methods(series_train_and_valid, series_train, HORIZON):
             ),
             method_name = 'moving average season',
             accuracy_measure=smape
-        ) for series_name in itertools.islice(series_train.columns, 61, 62)
+        ) for series_name in itertools.islice(series_train.columns, 27, 28)
     ]
 
     [
@@ -136,7 +136,7 @@ def plot_all_methods(series_train_and_valid, series_train, HORIZON):
             ),
             method_name = 'drift',
             accuracy_measure=smape
-        ) for series_name in itertools.islice(series_train.columns, 19, 20)
+        ) for series_name in itertools.islice(series_train.columns, 27, 28)
     ]
 
     [
@@ -151,7 +151,7 @@ def plot_all_methods(series_train_and_valid, series_train, HORIZON):
             ),
             method_name = 'decomposite_forecast',
             accuracy_measure=smape
-        ) for series_name in itertools.islice(series_train.columns, 19, 20)
+        ) for series_name in itertools.islice(series_train.columns, 27, 28)
     ]
 
 def plot_eval(y_true, y_pred, accuracy_measure, method_name = 'Naive', with_residual_diagnostic = False):
