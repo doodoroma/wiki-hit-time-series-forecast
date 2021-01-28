@@ -14276,7 +14276,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Understanding-the-data">Understanding the data<a class="anchor-link" href="#Understanding-the-data">&#182;</a></h2><p>The data that is stored in the <code>train.csv</code> file contains the number of visit per day on given (unknown) Wikipedia pages. The goal is to be able to predict the visit for the following 21 days.</p>
-<p>To be able to understand which method works well and which are not, it is advised to dig into the data to understand its characteristics. Firstly let's display an overall summary of the data sorted by the average hit for the whole period.</p>
+<p>To be able to understand which method works well and which do not, it is advised to dig into the data to understand its characteristics. Firstly let's display an overall summary of the data sorted by the average hit for the whole period.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14966,13 +14966,13 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>ARIMA is an acronym for <strong>A</strong>uto<strong>r</strong>egressive <strong>i</strong>ntegrated <strong>m</strong>oving <strong>a</strong>verage</p>
-<p>We tried out the package of <a href="http://alkaline-ml.com/pmdarima/">pmdarima</a> that is capable of constructing the best ARIMA model in a given range. The model can accept a range for the order of <code>p</code> and <code>q</code> as well as for the <code>P</code> and <code>Q</code> (seasonal). Some considerations</p>
+<p>We tried out the package of <a href="http://alkaline-ml.com/pmdarima/">pmdarima</a> that is capable of constructing the best ARIMA model in a given range. The model can accept a range for the order of <code>p</code> and <code>q</code> as well as for the <code>P</code> and <code>Q</code> (seasonal).</p>
+<p>Some considerations:</p>
 <ul>
 <li>The model shall have seasonal data </li>
 <li>The period should be <code>7</code></li>
-<li>To seek for the best model, it is possible to give a bigger for the order (complexity) of the model.</li>
 </ul>
-<p>Let's see three examples of a given series' ARIMA model. The first is not using any seasonal elements (<code>P = Q = 0</code>). It is visible that the prediction is more-or-less constant, there is no seasonal information. The second is a simple (lower order) but already seasonal model. In the visualization it is easy to seem that the predicted values are much closer and the <code>smape</code> value is better. Finally, we show a version where the model is more complex, but the predicted results - for this given example - is better.</p>
+<p>Let's see three examples of a given series' ARIMA model. The first is not using any seasonal elements (<code>P = Q = 0</code>). It is visible that the prediction is more-or-less constant, there is no seasonal information. The second is a simple (lower order) but already seasonal model. In the visualization it is easy to see that the predicted values are much closer and the <code>smape</code> value is better. Finally, we show a version where the model is more complex, but the predicted results - for this given example - is better.</p>
 <p>The source code, that creates the model is available on <a href="https://github.com/doodoroma/wiki-hit-time-series-forecast/blob/main/approach_naive.py#L36">GitHub</a></p>
 
 </div>
